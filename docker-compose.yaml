@@ -1,0 +1,19 @@
+version: "3.8"
+
+networks:
+  local-network:
+    external:
+      name: local-network
+
+services:
+  ai-agent:
+    build: .
+    container_name: ai-agent
+    env_file:
+      - .env
+    volumes:
+      - ./agent_config.yaml:/app/agent_config.yaml
+      - ./results.txt:/app/results.txt
+      - ./agent.py:/app/agent.py
+    networks:
+      - local-network

@@ -1,0 +1,8 @@
+github:
+  repo_owner: "arsulegai"
+  repo_name: "lfdt-governance"
+llm:
+  server_url: "http://llm-service:11434"
+  model: "deepseek-r1:1.5b"
+output:
+  result_file: "results.txt"
